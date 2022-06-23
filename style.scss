@@ -1,28 +1,37 @@
 @import "./variables";
 
+@mixin flexCenter($alignment, $direction) {
+    display: flex;
+    justify-content: $alignment;
+    align-items: center;
+    flex-direction: $direction;
+}
+
 * {
     margin: 0;
 }
 body {
-    max-width: 350px;
-    margin: 100px auto;
+    margin: 100px 17px;
     font-family: $font-family;
     text-align: center;
     font-size: 15px;
     background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
     background-repeat: no-repeat;
 }
-
+header {
 h1 {
     color: $very-dark-magenta;
     padding: 0 50px;
+    max-width: 300px;
 }
-
 p {
     color: $dark-grayish-magenta;
-    margin: 10px auto;
+    margin: 16px auto;
     line-height: 18px;
+    max-width: 275px;
 }
+}
+
 span {
     color: $very-dark-magenta;
     font-weight: 600;
@@ -30,16 +39,15 @@ span {
 }
 
 .rating-container {
+    @include flexCenter(center, column);
     color: $very-dark-magenta;
     background-color: $light-grayish-magenta;
-    text-align: center;
     margin: 20px 0;
-    display: flex;
-    flex-direction: column;
     border-radius: 10px;
     padding: 10px;
 }
 .buyer-container {
+    max-width: 282px;
     background-color: $very-dark-magenta;
     border-radius: 10px;
     padding: 30px;
@@ -60,6 +68,7 @@ span {
     p {
         color: white;
         text-align: left;
+        line-height: 20px;
     }
 }
 .person-img {
@@ -77,4 +86,45 @@ a {
     color: $very-dark-magenta;
     line-height: 20px;
 }    
+}
+
+// Desktop Version
+@media screen and (min-width: 600px) {
+    body {
+        max-width: 1070px;
+        width: 100%;
+        margin: 100px auto;
+        background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
+        background-repeat:  no-repeat;
+    }
+    header {
+        h1, p {
+                text-align: left;
+                margin: 16px 0;
+                padding: 0;
+            }
+        h1 {
+            font-size: 40px;
+        }
+    }
+    #user-comments {
+        @include flexCenter(space-between, row);
+        div:nth-child(2) {
+                margin-top: 50px;
+            }
+        div:nth-child(3) {
+                margin-top: 100px;
+        } 
+    }
+    main {
+        @include flexCenter(space-between, row);
+
+        .rating-container {
+                width: 400px;
+            }
+        
+        // #ratings {
+
+        // }
+    }
 }

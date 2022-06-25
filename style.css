@@ -15,6 +15,7 @@ header h1 {
   color: #502050;
   padding: 0 50px;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 header p {
@@ -96,16 +97,17 @@ span {
   margin: 0 15px;
 }
 
-.attribution {
+footer {
   color: #937b92;
+  margin-top: 100px;
 }
 
-.attribution a {
+footer a {
   color: #502050;
   line-height: 20px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   body {
     max-width: 1070px;
     width: 100%;
@@ -142,6 +144,24 @@ span {
   #user-comments div:nth-child(3) {
     margin-top: 100px;
   }
+  #ratings {
+    position: relative;
+  }
+  #ratings .one {
+    position: absolute;
+    bottom: 7px;
+    right: 170px;
+  }
+  #ratings .two {
+    position: absolute;
+    right: 127px;
+    top: -35px;
+  }
+  #ratings .three {
+    position: absolute;
+    right: 87px;
+    top: 20px;
+  }
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -159,6 +179,12 @@ span {
   }
   main .rating-container {
     width: 400px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 /*# sourceMappingURL=style.css.map */

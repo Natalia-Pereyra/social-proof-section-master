@@ -23,6 +23,7 @@ h1 {
     color: $very-dark-magenta;
     padding: 0 50px;
     max-width: 300px;
+    margin: 0 auto;
 }
 p {
     color: $dark-grayish-magenta;
@@ -80,8 +81,9 @@ span {
 .person-title {
     margin: 0 15px;
 }
-.attribution {
+footer {
     color: $dark-grayish-magenta;
+    margin-top: 100px;
 a {
     color: $very-dark-magenta;
     line-height: 20px;
@@ -89,7 +91,8 @@ a {
 }
 
 // Desktop Version
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 900px) {
     body {
         max-width: 1070px;
         width: 100%;
@@ -116,11 +119,31 @@ a {
                 margin-top: 100px;
         } 
     }
+    #ratings {
+        position: relative;
+        .one {
+            position: absolute;
+            bottom: 7px;
+            right: 170px;
+            }
+        .two {
+            position: absolute;
+            right: 127px;
+            top: -35px;
+        }
+        .three {
+            position: absolute;
+            right: 87px;
+            top: 20px;
+        }
+    }
     main {
         @include flexCenter(space-between, row);
 
         .rating-container {
                 width: 400px;
+                flex-direction: row;
+                justify-content: space-around;
             }
         
         // #ratings {

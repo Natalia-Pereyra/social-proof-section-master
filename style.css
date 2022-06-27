@@ -47,9 +47,10 @@ span {
           flex-direction: column;
   color: #502050;
   background-color: #f7f2f7;
-  margin: 20px 0;
+  margin: 20px auto;
   border-radius: 10px;
   padding: 10px;
+  max-width: 400px;
 }
 
 .buyer-container {
@@ -178,13 +179,13 @@ footer a {
             flex-direction: row;
   }
   main .rating-container {
-    width: 400px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    width: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

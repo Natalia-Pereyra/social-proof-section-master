@@ -43,9 +43,10 @@ span {
     @include flexCenter(center, column);
     color: $very-dark-magenta;
     background-color: $light-grayish-magenta;
-    margin: 20px 0;
+    margin: 20px auto;
     border-radius: 10px;
     padding: 10px;
+    max-width: 400px;  
 }
 .buyer-container {
     max-width: 282px;
@@ -141,9 +142,9 @@ a {
         @include flexCenter(space-between, row);
 
         .rating-container {
-                width: 400px;
                 flex-direction: row;
                 justify-content: space-around;
+                width: 400px;
             }
         
         // #ratings {
